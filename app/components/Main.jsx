@@ -1,11 +1,10 @@
 var React = require('react');
 
-var Main = (props) => (
+var Main = () => (
         <div>
             <div>
                 <div>
-                    <p>Main.jsx rendered</p>
-                    {props.children}
+                    <p>React Quiz app</p>
                 </div>
             </div>
         </div>
