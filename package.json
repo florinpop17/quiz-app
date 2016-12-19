@@ -1,47 +1,28 @@
 {
-  "name": "react-boilerplate",
+  "name": "quiz-app",
   "version": "1.0.0",
-  "description": "React boilerplate",
+  "description": "Quiz application built with React",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "webpack": "webpack"
+    "test": "No test",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Flopet17/react-boilerplate.git"
+    "url": "git+https://github.com/Flopet17/quiz-app.git"
   },
   "keywords": [
-    "reactjs",
-    "nodejs",
-    "html",
-    "javascript"
+    "React",
+    "Quiz",
+    "NodeJS",
+    "CSS",
+    "HTML",
+    "Javascript"
   ],
   "author": "Florin Pop",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Flopet17/react-boilerplate/issues"
+    "url": "https://github.com/Flopet17/quiz-app/issues"
   },
-  "homepage": "https://github.com/Flopet17/react-boilerplate#readme",
-  "dependencies": {
-    "axios": "^0.15.3",
-    "express": "^4.14.0",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-router": "^3.0.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.20.0",
-    "babel-loader": "^6.2.9",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.26.1",
-    "foundation-sites": "^6.3.0",
-    "jquery": "^3.1.1",
-    "nodemon": "^1.11.0",
-    "script-loader": "^0.7.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.14.0"
-  }
+  "homepage": "https://github.com/Flopet17/quiz-app#readme"
 }
