@@ -49,13 +49,17 @@ body {
     background-color: #0084da;
     color: #fff;
     font-size: 30px;
-    padding: 12px 20px;
+    flex: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #answers li p {
     color: #0b0e21;
     font-size: 16px;
     font-weight: 600;
+    flex: calc(100% - 75px);
     margin: auto 30px auto 30px;
 }
 
@@ -74,4 +78,14 @@ body {
     padding: 14px 75px;
     text-transform: uppercase;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    #question p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #answers li {
+        width: 100%;
+    }
 }
