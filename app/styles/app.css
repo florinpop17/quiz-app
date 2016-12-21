@@ -31,27 +31,18 @@ body {
     list-style-type: none;
     padding: 0;
     margin-top: 50px;
-}
-
-#answer ul:after {
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #answers li {
     background-color: #fff;
     border: 2px solid #0094da;
-    float:left;
+    min-height: 70px;
     width: 48%;
-    margin-bottom: 30px;
-    height: 70px;
     display: flex;
-    align-content: center;
-}
-
-#answers li:nth-child(2n) {
-    margin-left: 4%;
+    margin-bottom: 30px;
 }
 
 #answers li span {
@@ -65,7 +56,12 @@ body {
     color: #0b0e21;
     font-size: 16px;
     font-weight: 600;
-    margin: auto 0 auto 30px;
+    margin: auto 30px auto 30px;
+}
+
+#submit {
+    text-align: center;
+    margin-top: 20px;
 }
 
 #submit button {
@@ -73,8 +69,9 @@ body {
     border-radius: 0;
     background-color: #0b0e21;
     color: #fff;
-    font-size: 16px;
-    padding: 12px 75px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 14px 75px;
     text-transform: uppercase;
     margin: 0 auto;
 }

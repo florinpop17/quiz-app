@@ -19,9 +19,9 @@ class Main extends React.Component {
                         </div>
                         <div id="answers">
                             <ul>
-                                <li><span>A</span> <p>Answer A</p></li>
+                                <li><span>A</span> <p>Long a answer C Long answer C Long answer C A</p></li>
                                 <li><span>B</span> <p>Answer B</p></li>
-                                <li><span>C</span> <p>Long answer C Long answer C</p></li>
+                                <li><span>C</span> <p>Long answer C Long answer C Long answer C Long answer C Long answer C Long answer C</p></li>
                                 <li><span>D</span> <p>Answer D</p></li>
                             </ul>
                         </div>
