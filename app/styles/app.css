@@ -16,6 +16,11 @@ body {
     display:inline-block;
     padding: 7px 20px;
     font-weight: 600;
-/*    margin: 0;*/
+}
+
+#question p{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 

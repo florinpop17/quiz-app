@@ -15,7 +15,7 @@ class Main extends React.Component {
                 
                         <div id="question">
                             <h4>Question 1/10</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima recusandae culpa commodi tempore, qui voluptatibus nisi atque maiores error, quod omnis, autem ipsum quaerat impedit nesciunt id a, excepturi. Hic.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima recusandae culpa commodi tempore, qui voluptatibus nisi atque maiores error.</p>
                         </div>
                         <div id="answers">
                             <ul>
