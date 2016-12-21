@@ -21,7 +21,7 @@ class Main extends React.Component {
                             <ul>
                                 <li><span>A</span> <p>Answer A</p></li>
                                 <li><span>B</span> <p>Answer B</p></li>
-                                <li><span>C</span> <p>Answer C</p></li>
+                                <li><span>C</span> <p>Long answer C Long answer C</p></li>
                                 <li><span>D</span> <p>Answer D</p></li>
                             </ul>
                         </div>

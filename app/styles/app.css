@@ -33,6 +33,12 @@ body {
     margin-top: 50px;
 }
 
+#answer ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 #answers li {
     background-color: #fff;
     border: 2px solid #0094da;
@@ -60,4 +66,15 @@ body {
     font-size: 16px;
     font-weight: 600;
     margin: auto 0 auto 30px;
+}
+
+#submit button {
+    border: 0;
+    border-radius: 0;
+    background-color: #0b0e21;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 75px;
+    text-transform: uppercase;
+    margin: 0 auto;
 }
