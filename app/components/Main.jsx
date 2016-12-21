@@ -1,4 +1,6 @@
 import React from 'react';
+import data from '../data/data.json';
+console.log(data);
 
 class Main extends React.Component {
     constructor(props) {
