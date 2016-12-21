@@ -1,14 +1,12 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Main = require('Main');
+import React from 'react';
+import { render } from 'react-dom';
+import { Route, Router, IndexRoute, hashHistory } from 'react-router';
+import Main from 'Main';
 
 // App css
-require('style!css!applicationStyles');
+import 'style!css!applicationStyles';
 
-ReactDOM.render(
-    <Router history={hashHistory}>
-        <Route path="/" component={Main}></Route>
-    </Router>, 
+render(
+    <Main />, 
     document.getElementById("react-container")
 );

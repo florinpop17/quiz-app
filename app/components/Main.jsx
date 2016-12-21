@@ -1,13 +1,17 @@
-var React = require('react');
+import React from 'react';
 
-var Main = () => (
-        <div>
+class Main extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
+    render() {
+        return (
             <div>
-                <div>
-                    <p>React Quiz app</p>
-                </div>
+                <h1>Quiz app</h1>
             </div>
-        </div>
-    );
+        );
+    }
+};
 
-module.exports = Main;
+export default Main
