@@ -1,3 +1,18 @@
 body {
-    background-color: lightskyblue;
+    background-color: #e4e4e4;
+    font-family: sans-serif;
 }
+
+#question {
+    background-color: #0094da;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+#question h2{
+    background-color: #fff;
+    color: #0b0e21;
+    display:inline-block;
+}
+
