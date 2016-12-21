@@ -6,7 +6,7 @@ body {
 #question {
     background-color: #0094da;
     color: white;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -14,7 +14,8 @@ body {
     background-color: #fff;
     color: #0b0e21;
     display:inline-block;
-    padding: 7px 20px;
+    padding: 10px 25px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -22,5 +23,11 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#answers {
+    
 }
 
