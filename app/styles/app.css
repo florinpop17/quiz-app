@@ -1,6 +1,6 @@
 body {
     background-color: #e4e4e4;
-    font-family: sans-serif;
+	font-family: Open Sans;
 }
 
 #question {
@@ -10,9 +10,12 @@ body {
     text-align: center;
 }
 
-#question h2{
+#question h4{
     background-color: #fff;
     color: #0b0e21;
     display:inline-block;
+    padding: 7px 20px;
+    font-weight: 600;
+/*    margin: 0;*/
 }
 
