@@ -19,10 +19,10 @@ class Main extends React.Component {
                         </div>
                         <div id="answers">
                             <ul>
-                                <li><span>A</span>Answer A</li>
-                                <li><span>B</span>Answer B</li>
-                                <li><span>C</span>Answer C</li>
-                                <li><span>D</span>Answer D</li>
+                                <li><span>A</span> <p>Answer A</p></li>
+                                <li><span>B</span> <p>Answer B</p></li>
+                                <li><span>C</span> <p>Answer C</p></li>
+                                <li><span>D</span> <p>Answer D</p></li>
                             </ul>
                         </div>
                         <div id="submit">
