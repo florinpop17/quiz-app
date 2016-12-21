@@ -43,6 +43,21 @@ body {
     width: 48%;
     display: flex;
     margin-bottom: 30px;
+    transition: color .3s ease, border-color .3s ease;
+}
+
+#answers li:hover {
+    border-color: #1ea55b;
+    color: #1ea55b;
+    cursor: pointer;
+}
+
+#answers li:hover span {
+    background-color: #1ea55b;
+}
+
+#answers li:hover p {
+    color: #1ea55b;
 }
 
 #answers li span {
@@ -53,6 +68,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color .3s ease;
 }
 
 #answers li p {
@@ -60,24 +76,32 @@ body {
     font-size: 16px;
     font-weight: 600;
     flex: calc(100% - 75px);
-    margin: auto 30px auto 30px;
+    margin: auto 20px;
+    transition: color .3s ease;
 }
 
 #submit {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 #submit button {
-    border: 0;
+    border: 2px solid #0b0e21;
     border-radius: 0;
     background-color: #0b0e21;
     color: #fff;
     display: inline-block;
     font-size: 18px;
+    font-weight: 600;
     padding: 14px 75px;
-    text-transform: uppercase;
     margin: 0 auto;
+    text-transform: uppercase;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+#submit button:hover {
+    background-color: #fff;
+    color: #0b0e21;
 }
 
 @media (max-width: 768px) {
@@ -85,7 +109,12 @@ body {
         padding-left: 10px;
         padding-right: 10px;
     }
+    
     #answers li {
+        width: 100%;
+    }
+    
+    #submit button {
         width: 100%;
     }
 }
