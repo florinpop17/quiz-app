@@ -1,18 +1,19 @@
 import React from 'react';
-import data from '../data/data.json';
-console.log(data);
+import data from '../data/data';
 
 class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {title: 'Quiz app'}
+        this.state = {
+            question: 1
+        }
     }
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
-                        <h1>{this.state.title}</h1>
+                        <h1>Quiz application</h1>
                 
                         <div id="question">
                             <h4>Question 1/10</h4>
