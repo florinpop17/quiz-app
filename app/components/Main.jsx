@@ -10,7 +10,7 @@ class Main extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-md-10 col-md-offset-1">
+                    <div className="col-lg-10 col-lg-offset-1">
                         <h1>{this.state.title}</h1>
                 
                         <div id="question">
