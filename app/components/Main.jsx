@@ -5,7 +5,6 @@ class Main extends React.Component {
         super(props);
         this.state = {title: 'Quiz app'}
     }
-    
     render() {
         return (
             <div className="container">
