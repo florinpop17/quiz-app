@@ -16,6 +16,8 @@ class Answers extends React.Component {
         else {
             elem.className = 'wrong';
         }
+        
+        this.props.showButton();
     }
     
     render() {

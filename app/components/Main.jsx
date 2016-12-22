@@ -7,7 +7,8 @@ class Main extends React.Component {
         super(props);
         this.state = {
             nr: 0,
-            total: data.length
+            total: data.length,
+            showButton: false
         }
         this.nextQuestion = this.nextQuestion.bind(this);
     }
@@ -35,10 +36,20 @@ class Main extends React.Component {
             this.pushData(nr);
         }
         
+        this.setState({
+            showButton: false
+        })
+        
+    }
+    
+    handleShowButton() {
+        this.setState({
+            showButton: true
+        })
     }
     
     render() {
-        let { nr, total, question, answers, correct } = this.state;
+        let { nr, total, question, answers, correct, showButton } = this.state;
         
         return (
             <div className="container">
@@ -50,9 +61,9 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <Answers answers={answers} correct={correct}/>
+                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton.bind(this)}/>
                         <div id="submit">
-                            <button onClick={this.nextQuestion}>Submit</button>
+                            {showButton ? <button onClick={this.nextQuestion} >Next question</button> : null}
                         </div>
                         
                     </div>
