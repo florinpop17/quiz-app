@@ -6,13 +6,16 @@ class Answers extends React.Component {
     }
     
     checkAnswer(e) {
+        let elem = e.currentTarget;
         let { correct } = this.props;
-        let answer = Number(e.currentTarget.dataset.id);
+        let answer = Number(elem.dataset.id);
         
-        if(answer === correct)
-            console.log('right')
-        else
-            console.log('wrong')
+        if(answer === correct){
+            elem.className = 'right';
+        }
+        else {
+            elem.className = 'wrong';
+        }
     }
     
     render() {
