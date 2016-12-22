@@ -17,15 +17,6 @@ class Answers extends React.Component {
             console.log('wrong')
     }
     
-    handleSelectedLi(item) {
-        let { correct } = this.state;
-        
-        if(Number(item) === correct)
-            console.log('Right answer!');
-        else
-            console.log('Wrong answer!');
-    }
-    
     render() {
         return (
             <div id="answers">
