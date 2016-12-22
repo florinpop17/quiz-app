@@ -1,8 +1,8 @@
 export default [
     {
-        question: 'Question 1',
-        answers: ['Answer 11', 'Answer 12', 'Answer 13', 'AnswerC 14'],
-        correct: 4
+        question: 'Cine a fost primul om creat?',
+        answers: ['Eva', 'Adam', 'Cain', 'Abel'],
+        correct: 2
     },
 
     {
