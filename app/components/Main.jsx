@@ -36,6 +36,10 @@ class Main extends React.Component {
         
     }
     
+    handleSelectedLi(item) {
+        
+    }
+    
     render() {
         let { nr, total, question, answers } = this.state;
         
@@ -49,7 +53,7 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <Answers answers={answers} />
+                        <Answers answers={answers} selectedLi={this.handleSelectedLi}/>
                         <div id="submit">
                             <button onClick={this.nextQuestion}>Submit</button>
                         </div>
