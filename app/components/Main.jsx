@@ -16,12 +16,13 @@ class Main extends React.Component {
         this.setState({
             question: data[nr].question,
             answers: [data[nr].answers[0], data[nr].answers[1], data[nr].answers[2], data[nr].answers[3] ],
+            correct: data[nr].correct,
             nr: this.state.nr + 1
         });
     }
     
     componentWillMount() {
-        let { nr } = this.state
+        let { nr } = this.state;
         this.pushData(nr);
     }
     
@@ -36,12 +37,8 @@ class Main extends React.Component {
         
     }
     
-    handleSelectedLi(item) {
-        
-    }
-    
     render() {
-        let { nr, total, question, answers } = this.state;
+        let { nr, total, question, answers, correct } = this.state;
         
         return (
             <div className="container">
@@ -53,7 +50,7 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <Answers answers={answers} selectedLi={this.handleSelectedLi}/>
+                        <Answers answers={answers} correct={correct}/>
                         <div id="submit">
                             <button onClick={this.nextQuestion}>Submit</button>
                         </div>
