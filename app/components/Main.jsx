@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data/data';
+import Answers from 'Answers';
 
 class Main extends React.Component {
     constructor(props) {
@@ -14,10 +15,7 @@ class Main extends React.Component {
     pushData(nr) {        
         this.setState({
             question: data[nr].question,
-            answerA: data[nr].answers[0],
-            answerB: data[nr].answers[1],
-            answerC: data[nr].answers[2],
-            answerD: data[nr].answers[3],
+            answers: [data[nr].answers[0], data[nr].answers[1], data[nr].answers[2], data[nr].answers[3] ],
             nr: this.state.nr + 1
         });
     }
@@ -31,7 +29,7 @@ class Main extends React.Component {
         let { nr, total } = this.state;
         
         if(nr === total){
-            alert("You finished the quiz!");
+            alert("Congratulations! You finished the quiz!");
         } else {
             this.pushData(nr);
         }
@@ -39,7 +37,7 @@ class Main extends React.Component {
     }
     
     render() {
-        let { nr, total, question, answerA, answerB, answerC, answerD } = this.state;
+        let { nr, total, question, answers } = this.state;
         
         return (
             <div className="container">
@@ -51,14 +49,7 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <div id="answers">
-                            <ul>
-                                <li><span>A</span> <p>{answerA}</p></li>
-                                <li><span>B</span> <p>{answerB}</p></li>
-                                <li><span>C</span> <p>{answerC}</p></li>
-                                <li><span>D</span> <p>{answerD}</p></li>
-                            </ul>
-                        </div>
+                        <Answers answers={answers} />
                         <div id="submit">
                             <button onClick={this.nextQuestion}>Submit</button>
                         </div>
