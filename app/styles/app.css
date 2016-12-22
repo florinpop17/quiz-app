@@ -68,7 +68,7 @@ body {
 }
 
 #answers li:hover {
-    transform: rotateZ(-3deg);
+    transform: scale(1.03);
 }
 
 #answers li.right {
