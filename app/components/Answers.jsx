@@ -5,7 +5,8 @@ class Answers extends React.Component {
         super(props);
         this.state = {
             isAnswered: false,
-            classNames: ['', '', '', '']
+            classNames: ['', '', '', ''],
+            score: 0
         }
     }
     
@@ -20,6 +21,9 @@ class Answers extends React.Component {
 
             if(answer === correct){
                 updatedClassNames[answer-1] = 'right';
+                this.setState({
+                    score: this.state.score + 1
+                })
             }
             else {
                 updatedClassNames[answer-1] = 'wrong';
