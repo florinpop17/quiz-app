@@ -9,9 +9,9 @@ class Main extends React.Component {
             nr: 0,
             total: data.length,
             showButton: false,
-            questionAnswered: false
+            questionAnswered: false,
+            score: 0
         }
-        this.nextQuestion = this.nextQuestion.bind(this);
     }
     
     pushData(nr) {        
@@ -28,11 +28,11 @@ class Main extends React.Component {
         this.pushData(nr);
     }
     
-    nextQuestion() {
-        let { nr, total } = this.state;
+    nextQuestion = () => {
+        let { nr, total, score } = this.state;
         
         if(nr === total){
-            alert("Congratulations! You finished the quiz!");
+            alert(`You finished the quiz! You scored ${score} out of ${total}`);
         } else {
             this.pushData(nr);
             this.setState({
@@ -43,7 +43,7 @@ class Main extends React.Component {
         
     }
     
-    handleShowButton() {
+    handleShowButton = () => {
         this.setState({
             showButton: true,
             questionAnswered: true
@@ -63,7 +63,7 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton.bind(this)} isAnswered={questionAnswered}/>
+                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton} isAnswered={questionAnswered}/>
                         <div id="submit">
                             {showButton ? <button onClick={this.nextQuestion} >Next question</button> : null}
                         </div>
