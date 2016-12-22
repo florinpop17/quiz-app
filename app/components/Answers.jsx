@@ -6,7 +6,7 @@ class Answers extends React.Component {
     }
     
     handleCheck(e) {
-        console.log(e);
+        alert(e.target);
     }
     
     render() {
