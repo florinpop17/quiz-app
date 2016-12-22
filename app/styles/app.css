@@ -43,21 +43,8 @@ body {
     width: 48%;
     display: flex;
     margin-bottom: 30px;
-    transition: color .3s ease, border-color .3s ease;
-}
-
-#answers li:hover {
-    border-color: #1ea55b;
-    color: #1ea55b;
+    transition: color .3s ease, border-color .3s ease, transform .3s ease;
     cursor: pointer;
-}
-
-#answers li:hover span {
-    background-color: #1ea55b;
-}
-
-#answers li:hover p {
-    color: #1ea55b;
 }
 
 #answers li span {
@@ -78,6 +65,36 @@ body {
     flex: calc(100% - 75px);
     margin: auto 20px;
     transition: color .3s ease;
+}
+
+#answers li:hover {
+    transform: rotateZ(-3deg);
+}
+
+#answers li.right {
+    border-color: #1ea55b;
+    color: #1ea55b;
+}
+
+#answers li.right span {
+    background-color: #1ea55b;
+}
+
+#answers li.right p {
+    color: #1ea55b;
+}
+
+#answers li.wrong {
+    border-color: #dc0a0a;
+    color: #dc0a0a;
+}
+
+#answers li.wrong span {
+    background-color: #dc0a0a;
+}
+
+#answers li.wrong p {
+    color: #dc0a0a;
 }
 
 #submit {
