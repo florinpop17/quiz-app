@@ -35,12 +35,11 @@ class Main extends React.Component {
             alert("Congratulations! You finished the quiz!");
         } else {
             this.pushData(nr);
+            this.setState({
+                showButton: false,
+                questionAnswered: false
+            });
         }
-        
-        this.setState({
-            showButton: false,
-            questionAnswered: false
-        });
         
     }
     
