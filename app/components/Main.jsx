@@ -68,13 +68,13 @@ class Main extends React.Component {
     
     handleIncreaseScore() {
         this.setState({
-            score: this.state.score +1
+            score: this.state.score + 1
         });
     }
     
     render() {
         let { nr, total, question, answers, correct, showButton, questionAnswered, displayPopup, score} = this.state;
-        
+        console.log(score);
         return (
             <div className="container">
                

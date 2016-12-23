@@ -22,7 +22,7 @@ class Answers extends React.Component {
 
             if(answer === correct){
                 updatedClassNames[answer-1] = 'right';
-                this.increaseScore();
+                increaseScore();
             }
             else {
                 updatedClassNames[answer-1] = 'wrong';

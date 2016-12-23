@@ -6,15 +6,10 @@ class Popup extends React.Component {
         
         this.state = {
             time: 'start',
-            popupStart: {
+            popup: {
                 title: 'Welcome to the Quiz App',
                 text: 'This is a simple quiz aplication built using ReactJS and can be customized to fit any field by uploading your own data.',
                 buttonText: 'Start' 
-            },
-            popupEnd: {
-                title: 'Quiz finished!',
-                text: 'Congratulations! You finished the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions.',
-                buttonText: 'Restart'
             }
         };
         
@@ -26,21 +21,24 @@ class Popup extends React.Component {
         
         if(time === 'start'){
             this.setState({
-                time: 'end'
+                time: 'end',
+                title: 'Quiz finished!',
+                buttonText: 'Restart'
             });
             
             this.props.startQuiz();
         } else {
-            location.reload(); // restart the application
+            this.setState({
+                text: 'Congratulations! You finished the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions.'
+            });
+            
+            location.reload();// restart the application
         }
     }
     
     render() {
        
-        let { time } = this.state;
-        let popupData = (time === 'start' ? this.state.popupStart : this.state.popupEnd);
-        
-        let { title, text, buttonText } = popupData;
+        let { title, text, buttonText } = this.state.popup;
         
         let { style } = this.props;
         
