@@ -61,9 +61,11 @@ class Main extends React.Component {
         return (
             <div className="container">
                 <div className="popup-container">
-                    <div className="popup">
-                        <h1>{popup.title}</h1>
-                        <p>{popup.text}</p>
+                    <div className="container">
+                        <div className="popup">
+                            <h1>{popup.title}</h1>
+                            <p>{popup.text}</p>
+                        </div>
                     </div>
                 </div>
                 <div className="row">
