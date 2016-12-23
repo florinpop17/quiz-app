@@ -4,15 +4,34 @@ class Popup extends React.Component {
     constructor(props) {
         super(props);
         
+        this.state = {
+            time: 'start',
+            show: true,
+            popupStart: {
+                title: 'Welcome to the Quiz App',
+                text: 'This is a simple quiz aplication that aims to test your skills in a certain field. This application was built using ReactJS and can be customized to fit any field by changing the questions/answers.',
+                buttonText: 'Start'
+            },
+            popupEnd: {
+                title: 'Quiz finished!',
+                text: 'Result: ',
+                buttonText: 'Restart'
+            }
+        };
+        
         this.popupHandle = this.popupHandle.bind(this);
     }
     
     popupHandle() {
-        this.props.showHidePopup();
+        this.setState({time:'end'});
     }
     
     render() {
-        let { title, text, buttonText } = this.props;
+       
+        let { time } = this.state;
+        let popupData = (time === 'start' ? this.state.popupStart : this.state.popupEnd);
+        
+        let { title, text, buttonText } = popupData;
         
         return (
             <div className="popup-container">

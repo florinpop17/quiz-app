@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../data/data';
 import Answers from 'Answers';
+import Popup from 'Popup';
 import Footer from 'Footer';
 
 class Main extends React.Component {
@@ -11,12 +12,7 @@ class Main extends React.Component {
             total: data.length,
             showButton: false,
             questionAnswered: false,
-            score: 0,
-            popup: {
-                title: 'Welcome to the Quiz App',
-                text: 'This is a simple quiz aplication that aims to test your skills in a certain field. This application was built using ReactJS and can be customized to fit any field by changing the questions/answers.',
-                button: 'Start'
-            }
+            score: 0
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.handleShowButton = this.handleShowButton.bind(this);
@@ -41,7 +37,7 @@ class Main extends React.Component {
         let { nr, total, score } = this.state;
         
         if(nr === total){
-            alert(`You finished the quiz! You scored ${score} out of ${total}`);
+            //quiz finished
         } else {
             this.pushData(nr);
             this.setState({
