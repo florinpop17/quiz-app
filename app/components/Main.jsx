@@ -17,7 +17,7 @@ class Main extends React.Component {
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.handleShowButton = this.handleShowButton.bind(this);
-        this.startQuiz = this.startQuiz.bind(this);
+        this.handleStartQuiz = this.handleStartQuiz.bind(this);
     }
     
     pushData(nr) {        
@@ -56,8 +56,10 @@ class Main extends React.Component {
         })
     }
     
-    startQuiz() {
-        
+    handleStartQuiz() {
+        this.setState({
+            displayPopup: 'none' 
+        });
     }
     
     render() {
@@ -66,7 +68,7 @@ class Main extends React.Component {
         return (
             <div className="container">
                
-                <Popup style={{display: displayPopup}} score={score}/>
+                <Popup style={{display: displayPopup}} score={score} startQuiz={this.handleStartQuiz}/>
                 
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
