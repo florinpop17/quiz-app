@@ -144,13 +144,16 @@ body {
     right: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup {
-    margin-top: 12%;
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .popup h1 {
@@ -158,8 +161,12 @@ body {
     color: white;
     border-bottom: 1px solid #ccc;
     padding: 20px;
+    margin-top: 0;
 }
 
 .popup p {
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
