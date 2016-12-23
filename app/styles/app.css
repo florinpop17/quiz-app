@@ -154,6 +154,8 @@ body {
 }
 
 .popup h1 {
+    background-color: #0094da;
+    color: white;
     border-bottom: 1px solid #ccc;
     padding: 20px;
 }
