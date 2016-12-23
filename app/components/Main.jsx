@@ -18,6 +18,7 @@ class Main extends React.Component {
         this.nextQuestion = this.nextQuestion.bind(this);
         this.handleShowButton = this.handleShowButton.bind(this);
         this.handleStartQuiz = this.handleStartQuiz.bind(this);
+        this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
     }
     
     pushData(nr) {        
@@ -65,6 +66,12 @@ class Main extends React.Component {
         });
     }
     
+    handleIncreaseScore() {
+        this.setState({
+            score: this.state.score +1
+        });
+    }
+    
     render() {
         let { nr, total, question, answers, correct, showButton, questionAnswered, displayPopup, score} = this.state;
         
@@ -79,7 +86,7 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton} isAnswered={questionAnswered}/>
+                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton} isAnswered={questionAnswered} increaseScore={this.handleIncreaseScore}/>
                         <div id="submit">
                             {showButton ? <button className="fancy-btn" onClick={this.nextQuestion} >{nr===total ? 'Finish quiz' : 'Next question'}</button> : null}
                         </div>
