@@ -173,4 +173,6 @@ body {
 
 .popup .text-bottom {
     margin-top: 50px;
+    font-size: 14px;
+    letter-spacing: 0px;
 }
