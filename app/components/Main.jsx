@@ -10,7 +10,11 @@ class Main extends React.Component {
             total: data.length,
             showButton: false,
             questionAnswered: false,
-            score: 0
+            score: 0,
+            popup: {
+                title: 'Welcome to the Quiz App',
+                text: 'This application was built with ReactJS. You can find the code repo on <a href="https://github.com/Flopet17/quiz-app">github</a>. \n Feel free to make any pull requests to improve the application.'
+            }
         }
         this.nextQuestion = this.nextQuestion.bind(this);
     }
@@ -52,10 +56,16 @@ class Main extends React.Component {
     }
     
     render() {
-        let { nr, total, question, answers, correct, showButton, questionAnswered } = this.state;
+        let { nr, total, question, answers, correct, showButton, questionAnswered, popup} = this.state;
         
         return (
             <div className="container">
+                <div className="popup-container">
+                    <div className="popup">
+                        <h1>{popup.title}</h1>
+                        <p>{popup.text}</p>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
                         <h1>Quiz application</h1>
