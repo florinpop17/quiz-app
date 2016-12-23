@@ -6,7 +6,6 @@ class Popup extends React.Component {
         
         this.state = {
             time: 'start',
-            show: true,
             popupStart: {
                 title: 'Welcome to the Quiz App',
                 text: 'This is a simple quiz aplication that aims to test your skills in a certain field. This application was built using ReactJS and can be customized to fit any field by changing the questions/answers.',
@@ -23,7 +22,19 @@ class Popup extends React.Component {
     }
     
     popupHandle() {
-        this.setState({time:'end'});
+        let { time } = this.state;
+        
+        if(time === 'start'){
+            this.setState({
+                time: 'end'
+            });
+            
+            this.props.startQuiz();
+        } else {
+            this.setState({
+                time: 'start'
+            })
+        }
     }
     
     render() {

@@ -12,7 +12,8 @@ class Main extends React.Component {
             total: data.length,
             showButton: false,
             questionAnswered: false,
-            score: 0
+            score: 0,
+            displayPopup: 'block'
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.handleShowButton = this.handleShowButton.bind(this);
@@ -56,27 +57,16 @@ class Main extends React.Component {
     }
     
     startQuiz() {
-        let { title, text, button } = this.state.popup;
-        let { nr } = this.state;
         
-        if(nr === 0) { // testing if the user started the quiz... If the nr is 0, it means that the quiz haven't yet started
-            this.setStat({
-                popup: {
-                    title: 'You finished the quiz!',
-                    p: `Score: ${nr}/${total}`,
-                    button: 'Redo quiz'
-                }
-            });   
-        }
     }
     
     render() {
-        let { nr, total, question, answers, correct, showButton, questionAnswered, popup} = this.state;
+        let { nr, total, question, answers, correct, showButton, questionAnswered, displayPopup, score} = this.state;
         
         return (
             <div className="container">
                
-                <Popup popup={popup}/>
+                <Popup style={{display: displayPopup}} score={score}/>
                 
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
