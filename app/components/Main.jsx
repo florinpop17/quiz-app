@@ -79,7 +79,7 @@ class Main extends React.Component {
         
         return (
             <div className="container">
-                <Popup />
+                <Popup popup={popup}/>
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
                         <div id="question">
