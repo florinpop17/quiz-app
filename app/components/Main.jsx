@@ -67,10 +67,6 @@ class Main extends React.Component {
                             <div className="popup">
                                 <h1>{popup.title}</h1>
                                 <p>{popup.text}</p>
-                                <p className="text-bottom">
-                                    You can find the code repo on <a href="https://github.com/Flopet17/quiz-app">Github</a>. <br />
-                                    Feel free to make any pull requests to improve the aplication.
-                                </p>
                             </div>
                         </div>
                     </div>

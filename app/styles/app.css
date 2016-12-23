@@ -175,6 +175,15 @@ footer {
     text-align: center;
 }
 
+footer p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+footer span {
+    color: crimson;
+}
+
 @media (max-width: 768px) {
     #question p {
         padding-left: 10px;
@@ -187,5 +196,9 @@ footer {
     
     #submit button {
         width: 100%;
+    }
+    
+    footer {
+        position: static;
     }
 }
