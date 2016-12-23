@@ -7,7 +7,7 @@ class Popup extends React.Component {
         this.state = {
             time: 'start',
             title: 'Welcome to the Quiz App',
-            text: 'This is a simple quiz aplication built using ReactJS and can be customized to fit any field by uploading your own data.',
+            text: 'This is a simple quiz aplication built using ReactJS and can be customized to fit any field by uploading your own data. \n Currently it\'s loaded with CSS questions, but you can easily load any type of questions into it.' ,
             buttonText: 'Start' 
         };
         
@@ -20,8 +20,8 @@ class Popup extends React.Component {
         if(time === 'start'){
             this.setState({
                 time: 'end',
-                title: 'Quiz finished!',
-                buttonText: 'Restart'
+                title: 'Congratulations!',
+                buttonText: 'Restart the quiz'
             });
             
             this.props.startQuiz();
@@ -32,7 +32,7 @@ class Popup extends React.Component {
     
     componentWillReceiveProps(nextProps) {
         this.setState({
-            text: 'Congratulations! You finished the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions right.'
+            text: 'You have completed the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions right.'
         })
     }
     
@@ -42,9 +42,7 @@ class Popup extends React.Component {
         
         let { style } = this.props;
         
-        let newText = text.split('\n').map((item, i) => {
-            return <p key={i}>{item}</p>;
-        });
+        let newText = text.split('\n').map((item, i) => <p key={i}>{item}</p> );
         
         return (
             <div className="popup-container" style={style}>
