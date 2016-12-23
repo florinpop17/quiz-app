@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../data/data';
 import Answers from 'Answers';
+import Footer from 'Footer';
 
 class Main extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Main extends React.Component {
             score: 0,
             popup: {
                 title: 'Welcome to the Quiz App',
-                text: 'This application was built with ReactJS.'
+                text: 'This application was built using ReactJS.'
             }
         }
         this.nextQuestion = this.nextQuestion.bind(this);
@@ -67,7 +68,7 @@ class Main extends React.Component {
                                 <h1>{popup.title}</h1>
                                 <p>{popup.text}</p>
                                 <p className="text-bottom">
-                                    You can find the code repo on <a href="https://github.com/Flopet17/quiz-app">Github</a> <br />
+                                    You can find the code repo on <a href="https://github.com/Flopet17/quiz-app">Github</a>. <br />
                                     Feel free to make any pull requests to improve the aplication.
                                 </p>
                             </div>
@@ -76,8 +77,6 @@ class Main extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
-                        <h1>Quiz application</h1>
-                
                         <div id="question">
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
@@ -86,9 +85,9 @@ class Main extends React.Component {
                         <div id="submit">
                             {showButton ? <button onClick={this.nextQuestion} >Next question</button> : null}
                         </div>
-                        
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
