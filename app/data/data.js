@@ -1,23 +1,43 @@
 export default [
     {
-        question: 'Question 1',
-        answers: ['Answer 21', 'AnswerC 22', 'Answer 23', 'Answer 24'],
-        correct: 2
+        question: 'What does CSS stand for?',
+        answers: ['Computer Style Sheets', 'Creative Style Sheets', 'Cascading Style Sheets', 'Colorful Style Sheets'],
+        correct: 3
     },
 
     {
-        question: 'Question 2',
-        answers: ['AnswerC 21', 'Answer 22', 'Answer 23', 'Answer 24'],
+        question: 'Where in an HTML document is the correct place to refer to an external style sheet?',
+        answers: ['In the <head> section', 'In the <body> section', 'At the end of the document', 'You can\'t refer to an external style sheet'],
         correct: 1
     },    
     {
-        question: 'Question 3',
-        answers: ['Answer 31', 'AnswerC 32', 'Answer 33', 'Answer 34'],
-        correct: 2
+        question: 'Which HTML tag is used to define an internal style sheet?',
+        answers: ['<style>', '<script>', '<headStyle>', '<css>'],
+        correct: 1
     },    
     {
-        question: 'Question 4',
-        answers: ['Answer 41', 'Answer 42', 'AnswerC 43', 'Answer 44'],
+        question: 'Which HTML attribute is used to define inline styles?',
+        answers: ['class', 'style', 'font', 'styles'],
+        correct: 2
+    },
+    {
+        question: 'Which is the correct CSS syntax?',
+        answers: ['{body:color=black;}', '{body;color:black;}', 'body:color=black;', 'body {color: black;}'],
+        correct: 4
+    },
+    {
+        question: 'How do you insert a comment in a CSS file?',
+        answers: ['\' this is a comment', '/* this is a comment */', '// this is a comment', '// this is a comment //'],
+        correct: 2
+    },
+    {
+        question: 'Which property is used to change the background color?',
+        answers: ['color', 'bgcolor', 'background-color', 'bgColor'],
         correct: 3
+    },
+    {
+        question: 'How do you add a background color for all <h1> elements?',
+        answers: ['all.h1 {background-color:#FFFFFF;}', 'h1.setAll {background-color:#FFFFFF;}', 'h1.all {background-color:#FFFFFF;}', 'h1 {background-color:#FFFFFF;}'],
+        correct: 4
     }
 ]
