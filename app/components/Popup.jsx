@@ -6,9 +6,9 @@ class Popup extends React.Component {
         
         this.state = {
             time: 'start',
-            title: 'Welcome to the Quiz App',
-            text: 'This is a quiz aplication built using ReactJS.\n Currently it\'s loaded with CSS questions from W3Scools, but you can easily load any type of questions into it. \n It will dinamically load the question->answers pair and upload them into the components.' ,
-            buttonText: 'Start' 
+            title: 'Welcome to Quizz',
+            text: 'This is a quiz aplication built using ReactJS. <br /><br /> Currently it\'s loaded with CSS questions from W3Scools, but you can easily load any type of questions into it. <br /><br /> It will dinamically load the question->answers pair and upload them into the components.' ,
+            buttonText: 'Start the quiz' 
         };
         
         this.popupHandle = this.popupHandle.bind(this);
@@ -32,9 +32,14 @@ class Popup extends React.Component {
     
     componentWillReceiveProps(nextProps) {
         this.setState({
-            text: 'You have completed the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions right.'
+            text: 'You have completed the quiz. <br /> You got: <strong>' + this.props.score + '</strong> out of <strong>' +this.props.total +'</strong> questions right.'
         })
     }
+    
+    createMarkup(text) {
+        return {__html: text};
+    }
+    
     
     render() {
        
@@ -42,15 +47,13 @@ class Popup extends React.Component {
         
         let { style } = this.props;
         
-        let newText = text.split('\n').map((item, i) => <p key={i}>{item}</p> );
-        
         return (
             <div className="popup-container" style={style}>
                 <div className="container">
                     <div className="col-md-8 col-md-offset-2">
                         <div className="popup">
                             <h1>{title}</h1>
-                            {newText}
+                            <p dangerouslySetInnerHTML={this.createMarkup(text)} />
                             <button className="fancy-btn" onClick={this.popupHandle}>{buttonText}</button>
                         </div>
                     </div>
