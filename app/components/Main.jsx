@@ -75,7 +75,9 @@ class Main extends React.Component {
         
         return (
             <div className="container">
+               
                 <Popup popup={popup}/>
+                
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
                         <div id="question">
@@ -84,7 +86,7 @@ class Main extends React.Component {
                         </div>
                         <Answers answers={answers} correct={correct} showButton={this.handleShowButton} isAnswered={questionAnswered}/>
                         <div id="submit">
-                            {showButton ? <button onClick={this.nextQuestion} >Next question</button> : null}
+                            {showButton ? <button onClick={this.nextQuestion} >{nr===total ? 'Finish quiz' : 'Next question'}</button> : null}
                         </div>
                     </div>
                 </div>
