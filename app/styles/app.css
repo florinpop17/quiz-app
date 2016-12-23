@@ -103,7 +103,7 @@ body {
     margin: 20px 0;
 }
 
-#submit button {
+.fancy-btn {
     border: 2px solid #0b0e21;
     border-radius: 0;
     background-color: #0b0e21;
@@ -112,12 +112,12 @@ body {
     font-size: 18px;
     font-weight: 600;
     padding: 14px 75px;
-    margin: 0 auto;
+    margin: 30px auto;
     text-transform: uppercase;
     transition: color .2s ease, background-color .2s ease;
 }
 
-#submit button:hover {
+.fancy-btn:hover {
     background-color: #fff;
     color: #0b0e21;
 }

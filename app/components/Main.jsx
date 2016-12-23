@@ -86,7 +86,7 @@ class Main extends React.Component {
                         </div>
                         <Answers answers={answers} correct={correct} showButton={this.handleShowButton} isAnswered={questionAnswered}/>
                         <div id="submit">
-                            {showButton ? <button onClick={this.nextQuestion} >{nr===total ? 'Finish quiz' : 'Next question'}</button> : null}
+                            {showButton ? <button className="fancy-btn" onClick={this.nextQuestion} >{nr===total ? 'Finish quiz' : 'Next question'}</button> : null}
                         </div>
                     </div>
                 </div>

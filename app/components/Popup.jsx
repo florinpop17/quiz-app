@@ -40,7 +40,7 @@ class Popup extends React.Component {
                         <div className="popup">
                             <h1>{title}</h1>
                             <p>{text}</p>
-                            <button onClick={this.popupHandle}>{buttonText}</button>
+                            <button className="fancy-btn" onClick={this.popupHandle}>{buttonText}</button>
                         </div>
                     </div>
                 </div>
