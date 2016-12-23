@@ -153,8 +153,7 @@ body {
 .popup p {
     font-size: 18px;
     letter-spacing: 1px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 20px 10% 0;
 }
 
 footer {
@@ -170,8 +169,11 @@ footer {
 }
 
 footer p {
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin: 0;
+}
+
+footer small {
+    margin-bottom: 10px;
 }
 
 footer span {
@@ -191,8 +193,14 @@ footer span {
     #submit button {
         width: 100%;
     }
+}
+@media (max-width: 480px) {
     
     footer {
-        position: static;
+        padding: 5px;
+    }
+    
+    footer small {
+        display: none;
     }
 }
