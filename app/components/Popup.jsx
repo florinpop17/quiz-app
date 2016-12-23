@@ -6,11 +6,9 @@ class Popup extends React.Component {
         
         this.state = {
             time: 'start',
-            popup: {
-                title: 'Welcome to the Quiz App',
-                text: 'This is a simple quiz aplication built using ReactJS and can be customized to fit any field by uploading your own data.',
-                buttonText: 'Start' 
-            }
+            title: 'Welcome to the Quiz App',
+            text: 'This is a simple quiz aplication built using ReactJS and can be customized to fit any field by uploading your own data.',
+            buttonText: 'Start' 
         };
         
         this.popupHandle = this.popupHandle.bind(this);
@@ -27,18 +25,20 @@ class Popup extends React.Component {
             });
             
             this.props.startQuiz();
-        } else {
-            this.setState({
-                text: 'Congratulations! You finished the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions.'
-            });
-            
+        } else {            
             location.reload();// restart the application
         }
     }
     
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            text: 'Congratulations! You finished the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions right.'
+        })
+    }
+    
     render() {
        
-        let { title, text, buttonText } = this.state.popup;
+        let { title, text, buttonText } = this.state;
         
         let { style } = this.props;
         
