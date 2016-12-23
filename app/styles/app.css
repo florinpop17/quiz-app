@@ -122,21 +122,6 @@ body {
     color: #0b0e21;
 }
 
-@media (max-width: 768px) {
-    #question p {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    #answers li {
-        width: 100%;
-    }
-    
-    #submit button {
-        width: 100%;
-    }
-}
-
 .popup-container {
     position: fixed;
     top: 0;
@@ -176,4 +161,31 @@ body {
     margin-top: 50px;
     font-size: 14px;
     letter-spacing: 0px;
+}
+
+footer {
+    background-color: #0b0e21;
+    color: white;
+    letter-spacing: 1px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #question p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #answers li {
+        width: 100%;
+    }
+    
+    #submit button {
+        width: 100%;
+    }
 }
