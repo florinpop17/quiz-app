@@ -8,12 +8,12 @@ class Popup extends React.Component {
             time: 'start',
             popupStart: {
                 title: 'Welcome to the Quiz App',
-                text: 'This is a simple quiz aplication that aims to test your skills in a certain field. This application was built using ReactJS and can be customized to fit any field by changing the questions/answers.',
-                buttonText: 'Start'
+                text: 'This is a simple quiz aplication built using ReactJS and can be customized to fit any field by uploading your own data.',
+                buttonText: 'Start' 
             },
             popupEnd: {
                 title: 'Quiz finished!',
-                text: 'Result: ',
+                text: 'Congratulations! You finished the quiz. \n You got: ' + this.props.score + ' out of ' +this.props.total +' questions.',
                 buttonText: 'Restart'
             }
         };
@@ -31,9 +31,7 @@ class Popup extends React.Component {
             
             this.props.startQuiz();
         } else {
-            this.setState({
-                time: 'start'
-            })
+            location.reload(); // restart the application
         }
     }
     
@@ -46,13 +44,17 @@ class Popup extends React.Component {
         
         let { style } = this.props;
         
+        let newText = text.split('\n').map((item, i) => {
+            return <p key={i}>{item}</p>;
+        });
+        
         return (
             <div className="popup-container" style={style}>
                 <div className="container">
                     <div className="col-md-8 col-md-offset-2">
                         <div className="popup">
                             <h1>{title}</h1>
-                            <p>{text}</p>
+                            {newText}
                             <button className="fancy-btn" onClick={this.popupHandle}>{buttonText}</button>
                         </div>
                     </div>
