@@ -1,12 +1,12 @@
 export default [
     {
-        question: 'Cine a fost primul om creat?',
-        answers: ['Eva', 'Adam', 'Cain', 'Abel'],
+        question: 'Question 1',
+        answers: ['Answer 21', 'AnswerC 22', 'Answer 23', 'Answer 24'],
         correct: 2
     },
 
     {
-        question: 'Interabdasdn ajsnd askdb aksj akjsnc kacjn s',
+        question: 'Question 2',
         answers: ['AnswerC 21', 'Answer 22', 'Answer 23', 'Answer 24'],
         correct: 1
     },    
