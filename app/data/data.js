@@ -6,7 +6,7 @@ export default [
     },
 
     {
-        question: 'Question 2',
+        question: 'Interabdasdn ajsnd askdb aksj akjsnc kacjn s',
         answers: ['AnswerC 21', 'Answer 22', 'Answer 23', 'Answer 24'],
         correct: 1
     },    

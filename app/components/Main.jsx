@@ -85,7 +85,7 @@ class Main extends React.Component {
                             <div className="popup">
                                 <h1>{popup.title}</h1>
                                 <p>{popup.text}</p>
-                                <button onClick={startQuiz}>{popup.button}</button>
+                                <button onClick={this.startQuiz}>{popup.button}</button>
                             </div>
                         </div>
                     </div>
