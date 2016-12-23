@@ -13,7 +13,7 @@ class Main extends React.Component {
             score: 0,
             popup: {
                 title: 'Welcome to the Quiz App',
-                text: 'This application was built with ReactJS. You can find the code repo on <a href="https://github.com/Flopet17/quiz-app">github</a>. \n Feel free to make any pull requests to improve the application.'
+                text: 'This application was built with ReactJS.'
             }
         }
         this.nextQuestion = this.nextQuestion.bind(this);
@@ -66,6 +66,10 @@ class Main extends React.Component {
                             <div className="popup">
                                 <h1>{popup.title}</h1>
                                 <p>{popup.text}</p>
+                                <p className="text-bottom">
+                                    You can find the code repo on <a href="https://github.com/Flopet17/quiz-app">Github</a> <br />
+                                    Feel free to make any pull requests to improve the aplication.
+                                </p>
                             </div>
                         </div>
                     </div>
