@@ -1,7 +1,7 @@
 body {
     background-color: #e4e4e4;
 	font-family: Open Sans;
-    margin-top: 12%;
+    margin-top: 10%;
 }
 
 #question {
@@ -155,12 +155,6 @@ body {
     letter-spacing: 1px;
     margin-left: 10%;
     margin-right: 10%;
-}
-
-.popup .text-bottom {
-    margin-top: 50px;
-    font-size: 14px;
-    letter-spacing: 0px;
 }
 
 footer {
