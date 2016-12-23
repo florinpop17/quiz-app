@@ -13,7 +13,7 @@ class Main extends React.Component {
             showButton: false,
             questionAnswered: false,
             score: 0,
-            displayPopup: 'block'
+            displayPopup: 'flex'
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.handleShowButton = this.handleShowButton.bind(this);
@@ -38,7 +38,9 @@ class Main extends React.Component {
         let { nr, total, score } = this.state;
         
         if(nr === total){
-            //quiz finished
+            this.setState({
+                displayPopup: 'flex' 
+            });
         } else {
             this.pushData(nr);
             this.setState({
@@ -58,7 +60,8 @@ class Main extends React.Component {
     
     handleStartQuiz() {
         this.setState({
-            displayPopup: 'none' 
+            displayPopup: 'none',
+            nr: 1
         });
     }
     

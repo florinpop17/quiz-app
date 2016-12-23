@@ -44,8 +44,10 @@ class Popup extends React.Component {
         
         let { title, text, buttonText } = popupData;
         
+        let { style } = this.props;
+        
         return (
-            <div className="popup-container">
+            <div className="popup-container" style={style}>
                 <div className="container">
                     <div className="col-md-8 col-md-offset-2">
                         <div className="popup">
