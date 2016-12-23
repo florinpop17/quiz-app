@@ -14,10 +14,13 @@ class Main extends React.Component {
             score: 0,
             popup: {
                 title: 'Welcome to the Quiz App',
-                text: 'This application was built using ReactJS.'
+                text: 'This is a simple quiz aplication that aims to test your skills in a certain field. This application was built using ReactJS and can be customized to fit any field by changing the questions/answers.',
+                button: 'Start'
             }
         }
         this.nextQuestion = this.nextQuestion.bind(this);
+        this.handleShowButton = this.handleShowButton.bind(this);
+        this.startQuiz = this.startQuiz.bind(this);
     }
     
     pushData(nr) {        
@@ -56,6 +59,21 @@ class Main extends React.Component {
         })
     }
     
+    startQuiz() {
+        let { title, text, button } = this.state.popup;
+        let { nr } = this.state.nr;
+        
+        if(nr === 0) { // testing if the user started the quiz... If the nr is 0, it means that the quiz haven't yet started
+            this.setStat({
+                popup: {
+                    title: 'You finished the quiz!',
+                    p: `Score: ${nr}/${total}`,
+                    button: 'Redo quiz'
+                }
+            });   
+        }
+    }
+    
     render() {
         let { nr, total, question, answers, correct, showButton, questionAnswered, popup} = this.state;
         
@@ -67,6 +85,7 @@ class Main extends React.Component {
                             <div className="popup">
                                 <h1>{popup.title}</h1>
                                 <p>{popup.text}</p>
+                                <button onClick={startQuiz}>{popup.button}</button>
                             </div>
                         </div>
                     </div>
@@ -77,7 +96,7 @@ class Main extends React.Component {
                             <h4>Question {nr}/{total}</h4>
                             <p>{question}</p>
                         </div>
-                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton.bind(this)} isAnswered={questionAnswered}/>
+                        <Answers answers={answers} correct={correct} showButton={this.handleShowButton} isAnswered={questionAnswered}/>
                         <div id="submit">
                             {showButton ? <button onClick={this.nextQuestion} >Next question</button> : null}
                         </div>
