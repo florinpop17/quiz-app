@@ -61,7 +61,7 @@ class Main extends React.Component {
     
     startQuiz() {
         let { title, text, button } = this.state.popup;
-        let { nr } = this.state.nr;
+        let { nr } = this.state;
         
         if(nr === 0) { // testing if the user started the quiz... If the nr is 0, it means that the quiz haven't yet started
             this.setStat({
@@ -79,17 +79,7 @@ class Main extends React.Component {
         
         return (
             <div className="container">
-                <div className="popup-container">
-                    <div className="container">
-                        <div className="col-md-6 col-md-offset-3">
-                            <div className="popup">
-                                <h1>{popup.title}</h1>
-                                <p>{popup.text}</p>
-                                <button onClick={this.startQuiz}>{popup.button}</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Popup />
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
                         <div id="question">
