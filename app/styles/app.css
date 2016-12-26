@@ -71,7 +71,6 @@ body {
 
 #answers li:after{
     display: block;
-    content: "&#10003";
 }
 
 #answers li:hover {
