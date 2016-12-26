@@ -74,11 +74,11 @@ class Main extends React.Component {
     
     render() {
         let { nr, total, question, answers, correct, showButton, questionAnswered, displayPopup, score} = this.state;
-        console.log(score);
+        
         return (
             <div className="container">
                
-                <Popup style={{display: displayPopup}} score={score} total={total} startQuiz={this.handleStartQuiz}/>
+                { /* <Popup style={{display: displayPopup}} score={score} total={total} startQuiz={this.handleStartQuiz}/> */ }
                 
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">

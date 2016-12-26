@@ -69,6 +69,11 @@ body {
     transition: color .3s ease;
 }
 
+#answers li:after{
+    display: block;
+    content: "&#10003";
+}
+
 #answers li:hover {
     transform: scale(1.03);
 }
