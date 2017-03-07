@@ -7,7 +7,7 @@ class Popup extends React.Component {
         this.state = {
             time: 'start',
             title: 'Welcome to Quizz',
-            text: 'This is a quiz aplication built using ReactJS. <br /><br /> Currently it\'s loaded with CSS questions from W3Scools, but you can easily load any type of questions into it. <br /><br /> It will dinamically load the question->answers pair and upload them into the components.' ,
+            text: 'This is a quiz application built using ReactJS. <br /><br /> Currently it\'s loaded with CSS questions from W3Scools, but you can easily load any type of questions into it. <br /><br /> It will dynamically load the question->answers pair and upload them into the components.' ,
             buttonText: 'Start the quiz' 
         };
         
