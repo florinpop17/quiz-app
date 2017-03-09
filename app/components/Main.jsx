@@ -20,8 +20,8 @@ class Main extends React.Component {
         this.handleStartQuiz = this.handleStartQuiz.bind(this);
         this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
     }
-    
-    pushData(nr) {        
+
+    pushData(nr) {
         this.setState({
             question: data[nr].question,
             answers: [data[nr].answers[0], data[nr].answers[1], data[nr].answers[2], data[nr].answers[3] ],
@@ -29,18 +29,18 @@ class Main extends React.Component {
             nr: this.state.nr + 1
         });
     }
-    
+
     componentWillMount() {
         let { nr } = this.state;
         this.pushData(nr);
     }
-    
+
     nextQuestion() {
         let { nr, total, score } = this.state;
-        
+
         if(nr === total){
             this.setState({
-                displayPopup: 'flex' 
+                displayPopup: 'flex'
             });
         } else {
             this.pushData(nr);
@@ -49,37 +49,37 @@ class Main extends React.Component {
                 questionAnswered: false
             });
         }
-        
+
     }
-    
+
     handleShowButton() {
         this.setState({
             showButton: true,
             questionAnswered: true
         })
     }
-    
+
     handleStartQuiz() {
         this.setState({
             displayPopup: 'none',
             nr: 1
         });
     }
-    
+
     handleIncreaseScore() {
         this.setState({
             score: this.state.score + 1
         });
     }
-    
+
     render() {
         let { nr, total, question, answers, correct, showButton, questionAnswered, displayPopup, score} = this.state;
-        
+
         return (
             <div className="container">
-               
-                { /* <Popup style={{display: displayPopup}} score={score} total={total} startQuiz={this.handleStartQuiz}/> */ }
-                
+
+                <Popup style={{display: displayPopup}} score={score} total={total} startQuiz={this.handleStartQuiz}/>
+
                 <div className="row">
                     <div className="col-lg-10 col-lg-offset-1">
                         <div id="question">
